@@ -27,14 +27,52 @@ select {
     margin: 10px 0 20px;
     border: 1px solid #ccc;
     border-radius: 4px;
+    box-sizing: border-box; /* to make padding included in width */
 }
 
 label {
     font-weight: bold;
+    display: block; /* make labels block for spacing */
+    margin-bottom: 5px;
 }
 
 .gender-group {
     margin-bottom: 20px;
 }
 
-.gender-group
+.gender-group input[type="radio"] {
+    margin-right: 6px;
+    cursor: pointer;
+}
+
+.gender-group label {
+    font-weight: normal;
+    margin-right: 15px;
+    cursor: pointer;
+}
+
+.checkbox {
+    margin-bottom: 20px;
+}
+
+.checkbox input[type="checkbox"] {
+    margin-right: 6px;
+    cursor: pointer;
+}
+
+button {
+    background-color: #007BFF;
+    color: white;
+    border: none;
+    padding: 12px;
+    width: 100%;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
