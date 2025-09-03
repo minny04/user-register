@@ -1,88 +1,36 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
+    <meta charset="UTF-8" />
     <title>User Registration Form</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            background-color: #f0f4f8;
-        }
-        .container {
-            width: 400px;
-            margin: 50px auto;
-            background: white;
-            padding: 30px;
-            border-radius: 8px;
-            box-shadow: 0 0 10px rgba(0,0,0,0.1);
-        }
-        h2 {
-            text-align: center;
-            margin-bottom: 25px;
-        }
-        input[type="text"],
-        input[type="email"],
-        input[type="password"],
-        select {
-            width: 100%;
-            padding: 10px;
-            margin: 10px 0 20px;
-            border: 1px solid #ccc;
-            border-radius: 4px;
-        }
-        label {
-            font-weight: bold;
-        }
-        .gender-group {
-            margin-bottom: 20px;
-        }
-        .gender-group input {
-            margin-right: 5px;
-        }
-        .checkbox {
-            margin-bottom: 20px;
-        }
-        button {
-            background-color: #007BFF;
-            color: white;
-            border: none;
-            padding: 12px;
-            width: 100%;
-            border-radius: 4px;
-            cursor: pointer;
-            font-size: 16px;
-        }
-        button:hover {
-            background-color: #0056b3;
-        }
-    </style>
+    <link rel="stylesheet" href="style.css" />
 </head>
 <body>
 
 <div class="container">
     <h2>User Registration</h2>
-    <form action="register.php" method="POST">
+    <form id="registrationForm" action="register.php" method="POST">
         <label for="fullname">Full Name</label>
-        <input type="text" id="fullname" name="fullname" required>
+        <input type="text" id="fullname" name="fullname" required />
 
         <label for="email">Email Address</label>
-        <input type="email" id="email" name="email" required>
+        <input type="email" id="email" name="email" required />
 
         <label for="password">Password</label>
-        <input type="password" id="password" name="password" required>
+        <input type="password" id="password" name="password" required />
 
         <div class="gender-group">
-            <label>Gender:</label><br>
-            <input type="radio" id="male" name="gender" value="Male">
-            <label for="male" style="font-weight: normal;">Male</label>
-            <input type="radio" id="female" name="gender" value="Female">
-            <label for="female" style="font-weight: normal;">Female</label>
-            <input type="radio" id="other" name="gender" value="Other">
-            <label for="other" style="font-weight: normal;">Other</label>
+            <label>Gender:</label><br />
+            <input type="radio" id="male" name="gender" value="Male" />
+            <label for="male" class="radio-label">Male</label>
+            <input type="radio" id="female" name="gender" value="Female" />
+            <label for="female" class="radio-label">Female</label>
+            <input type="radio" id="other" name="gender" value="Other" />
+            <label for="other" class="radio-label">Other</label>
         </div>
 
         <label for="country">Country</label>
-        <select id="country" name="country">
+        <select id="country" name="country" required>
             <option value="">--Select--</option>
             <option value="USA">USA</option>
             <option value="UK">UK</option>
@@ -91,13 +39,14 @@
         </select>
 
         <div class="checkbox">
-            <input type="checkbox" id="terms" name="terms" required>
-            <label for="terms" style="font-weight: normal;">I agree to the Terms and Conditions</label>
+            <input type="checkbox" id="terms" name="terms" required />
+            <label for="terms" class="checkbox-label">I agree to the Terms and Conditions</label>
         </div>
 
         <button type="submit">Register</button>
     </form>
 </div>
 
+<script src="script.js"></script>
 </body>
 </html>
